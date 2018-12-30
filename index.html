@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.png">
+
+
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -140,13 +142,42 @@
       </nav>
     </header>
     <!-- Intro Image-->
-    <section id="intro" style="background: url(img/IMG_8554-2.jpg) center center no-repeat; background-size: cover;" class="intro-section pb-2">
-      <div class="container text-center">
-        <h1 data-animate="fadeInDown" class="text-shadow mb-5">Hello, I'm Richard!</h1>
-        <p data-animate="slideInUp" class="h3 text-shadow text-400">EVERY DAY A NEW SUNRISE, A NEW BEGINNING</p>
+    <!-- <section id="intro" style="background: url(img/IMG_8554-2.jpg) center center no-repeat; background-size: cover;" class="intro-section pb-2"> -->
+<!--     <section id="intro" class="intro-section pb-2">
+ --> 
+  <section id="intro">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/about2.jpg" alt="First slide" height="650"class="intro-section pb-2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>EVERY DAY A NEW SUNRISE, A NEW  BEGINNING</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/main.jpg" alt="Second slide" height="650"class="intro-section pb-2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>EVERY DAY A NEW SUNRISE, A NEW  BEGINNING</h5>
+          </div>
+        </div>
+     
       </div>
-    </section>
-    <!-- About-->
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  </div>
+  </section>
+<!--     </section>
+ -->    <!-- About-->
     <section id="about" class="about-section">
       <div class="container">
         <header class="text-center">
@@ -162,9 +193,6 @@
             <p>
               That’s me below with a Cuban mango. I have always been a curious fellow, and through my experiences as a musician and involvement in the church, I have had the privilege of traveling around the world and experiencing many diverse cultures. Whether it be marveling at the enormity of the Great Wall of China, eating delicious mangos in Cuba, or bonding with fellow musicians in Korea, I wake up every day to meet new people and explore the diverse cultures of the world. Nonetheless, I still like to think of myself as naïve and young, inexperienced in the history and traditions of different peoples.
             </p>
-          </div>
-          <div data-animate="fadeInUp" class="col-lg-6">
-            <img src="img/about2.jpg" height="100%" width="90%">
           </div>
           <div data-animate="fadeInUp" class="col-sm-6 mx-auto mt-5"><img src="img/about1.jpg" alt="I'm Richard!" class="image rounded-circle img-fluid">
           </div>
@@ -920,11 +948,6 @@
               <div data-category="history" class="reference-item col-lg-3 col-md-6">
                 <div class="reference">
                   <img src="img/h26.jpg" alt="" class="img-fluid">
-                </div>
-              </div>
-              <div data-category="history" class="reference-item col-lg-3 col-md-6">
-                <div class="reference">
-                  <img src="img/h27.jpg" alt="" class="img-fluid">
                 </div>
               </div>
 
