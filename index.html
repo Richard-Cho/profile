@@ -29,7 +29,96 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
+
+<style>
+  #myImg, #myImg1, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #myImg:hover, #myImg1:hover, #myImg2:hover, #myImg3:hover, #myImg4:hover, #myImg5:hover, #myImg6:hover, #myImg7:hover, #myImg8:hover {opacity: 0.7;}
+
+
+  /* The Modal (background) */
+  .modal {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  /*.close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }*/
+
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px) {
+    .modal-content {
+      width: 100%;
+    }
+  }
+</style>
   <body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
     <!-- Reference item-->
     <!-- navbar-->
     <header class="header">
@@ -40,9 +129,9 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item"><a href="#intro" class="nav-link link-scroll">Intro</a></li>
               <li class="nav-item"><a href="#about" class="nav-link link-scroll">About</a></li>
+              <li class="nav-item"><a href="#references" class="nav-link link-scroll">Music</a></li>
               <li class="nav-item"><a href="#testimonials" class="nav-link link-scroll">Awards/Competitions</a></li>
               <li class="nav-item"><a href="#services" class="nav-link link-scroll">Community Services</a></li>
-              <li class="nav-item"><a href="#references" class="nav-link link-scroll">My work</a></li>
               <li class="nav-item"><a href="#stem" class="nav-link link-scroll">Stem Experience</a></li>
               <li class="nav-item"><a href="#album" class="nav-link link-scroll">Album</a></li>
             </ul>
@@ -83,16 +172,20 @@
       </div>
     </section>
     
+    
     <!-- Testimonials-->
     <section id="testimonials" class="testimonials-section bg-gray">
+
       <div class="container">
+
         <header class="text-center mb-2">
           <h2 data-animate="fadeInUp" class="title">Awards / Competitions</h2>
         </header>
         <ul data-animate="fadeInUp" class="owl-carousel owl-theme testimonials equalize-height">
           <li class="item">
             <div class="testimonial full-height">
-              <img alt="" src="img/award1.jpg">
+              <img id="myImg" alt="" src="img/award1.jpg" onclick="myFunction(this.id)">
+
               <div class="bottom">
                 <div class="name-picture">
                   <p>Honored to solo with the LaGrange Symphony Orchestra</p>
@@ -102,8 +195,9 @@
           </li>
           <li class="item">
             <div class="testimonial full-height">
-              <img alt="" src="img/award2-1.jpg">
-              <img alt="" src="img/award2-2.jpg">
+              <img id="myImg1" alt="" src="img/award2-1.jpg" onclick="myFunction(this.id)">
+              <br>
+              <img id="myImg2" alt="" src="img/award2-2.jpg" onclick="myFunction(this.id)">
               <div class="bottom">
                 <div class="name-picture">
                   <p>Blount Slawson Young Artists Competition - 2nd place </p>
@@ -113,7 +207,7 @@
           </li>
           <li class="item">
             <div class="testimonial full-height">
-              <img alt="" src="img/award3.jpg">
+              <img id="myImg3" alt="" src="img/award3.jpg" onclick="myFunction(this.id)">
               <div class="bottom">
                 <div class="name-picture">
                   <p>Dekalb Symphony Young Artists Concerto Competition - 1st place</p>
@@ -123,11 +217,11 @@
           </li>
           <li class="item">
             <div class="testimonial full-height">
-              <img alt="" src="img/award4-1.jpg">
-              <img alt="" src="img/award4-2.jpg">
+              <img id="myImg4" alt="" src="img/award4-1.jpg" onclick="myFunction(this.id)">
+              <br>
+              <img id="myImg5" alt="" src="img/award4-2.jpg" onclick="myFunction(this.id)">
                 <div class="bottom">
                   <div class="name-picture">
-                    <br>
                     <p>Samuel Fordis Young Artists Competition - 1st place</p>
                   </div>
                 </div>
@@ -135,8 +229,8 @@
           </li>
           <li class="item">
             <div class="testimonial full-height">
-              <img alt="" src="img/award5.jpg">
-              <img alt="" src="img/award5-1.jpg">
+              <img id="myImg6" alt="" src="img/award5.jpg" onclick="myFunction(this.id)">
+              <img id="myImg7" alt="" src="img/award5-1.jpg" onclick="myFunction(this.id)">
               <div class="bottom">
                 <div class="name-picture">
                   <br>
@@ -147,9 +241,10 @@
           </li>
           <li class="item">
             <div class="testimonial full-height">
-              <img alt="" src="img/award6.jpg">
+              <img id="myImg8" alt="" src="img/award6.jpg" onclick="myFunction(this.id)">
               <div class="bottom">
                 <div class="name-picture">
+                  <br>
                   <p>Ruth Kern Concerto Competition - 1st place</p>
                 </div>
               </div>
@@ -202,7 +297,7 @@
       <div class="container">
         <div class="col-sm-12">
           <div class="mb-5 text-center">
-            <h2 data-animate="fadeInUp" class="title">My work</h2>
+            <h2 data-animate="fadeInUp" class="title">Music</h2>
 <!--             <p data-animate="fadeInUp" class="lead">I have worked on dozens of projects so I have picked only the latest for you.</p>
  -->          </div>
           <ul id="filter" data-animate="fadeInUp">
@@ -944,6 +1039,29 @@
       </div>
     </footer>
 
+    <script>
+    function myFunction(myID) {
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById(myID);
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+    }
+    </script>
 
     <!-- JavaScript files-->
     <script src="vendor/jquery/jquery.min.js"></script>
